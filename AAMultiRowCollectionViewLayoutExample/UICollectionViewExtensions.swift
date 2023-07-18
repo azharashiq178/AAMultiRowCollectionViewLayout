@@ -1,6 +1,6 @@
 //
-//  CollectionViewExtensions.swift
-//  AAMultiRowCollectionViewLayout
+//  UICollectionViewExtensions.swift
+//  AAMultiRowCollectionViewLayoutExample
 //
 //  Created by muhammad azher on 18/07/2023.
 //
@@ -76,5 +76,3 @@ extension ClassNameProtocol {
         return type(of: self).className
     }
 }
-
-extension NSObject: ClassNameProtocol {}

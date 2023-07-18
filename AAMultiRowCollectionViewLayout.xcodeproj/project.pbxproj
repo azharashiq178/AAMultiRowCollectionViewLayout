@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E0B95462A66B4280021A52B /* AAMultiRowCollectionViewLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC530982A6677A700894704 /* AAMultiRowCollectionViewLayout.framework */; };
 		7EC5309D2A6677A700894704 /* AAMultiRowCollectionViewLayout.docc in Sources */ = {isa = PBXBuildFile; fileRef = 7EC5309C2A6677A700894704 /* AAMultiRowCollectionViewLayout.docc */; };
 		7EC530A32A6677A700894704 /* AAMultiRowCollectionViewLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC530982A6677A700894704 /* AAMultiRowCollectionViewLayout.framework */; };
 		7EC530A82A6677A700894704 /* AAMultiRowCollectionViewLayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC530A72A6677A700894704 /* AAMultiRowCollectionViewLayoutTests.swift */; };
@@ -87,12 +88,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E0B95462A66B4280021A52B /* AAMultiRowCollectionViewLayout.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7E0B95452A66B4280021A52B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7EC5308E2A6677A700894704 = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +109,7 @@
 				7EC530A62A6677A700894704 /* AAMultiRowCollectionViewLayoutTests */,
 				7EC531042A667C6700894704 /* AAMultiRowCollectionViewLayoutExample */,
 				7EC530992A6677A700894704 /* Products */,
+				7E0B95452A66B4280021A52B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};

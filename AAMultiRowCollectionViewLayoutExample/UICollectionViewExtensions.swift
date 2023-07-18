@@ -76,3 +76,5 @@ extension ClassNameProtocol {
         return type(of: self).className
     }
 }
+
+extension NSObject: ClassNameProtocol {}

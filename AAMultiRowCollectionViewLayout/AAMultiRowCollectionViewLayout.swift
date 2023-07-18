@@ -54,13 +54,13 @@ extension AAMultiRowCollectionViewLayoutDelegate {
     public func spacingBetweenRows(in section: Int) -> CGFloat {
         return 5
     }
-    func registerSectionBackgroundViewsInLayout() -> [UICollectionReusableView.Type] {
+    public func registerSectionBackgroundViewsInLayout() -> [UICollectionReusableView.Type] {
         return []
     }
-    func registerFootersInLayout() -> [UICollectionReusableView.Type] {
+    public func registerFootersInLayout() -> [UICollectionReusableView.Type] {
         return []
     }
-    func registerHeadersInLayout() -> [UICollectionReusableView.Type] {
+    public func registerHeadersInLayout() -> [UICollectionReusableView.Type] {
         return []
     }
 }
@@ -125,7 +125,7 @@ public class AAMultiRowCollectionViewLayoutConfiguration {
     public func createLayout(layoutDelegate: AAMultiRowCollectionViewLayoutDelegate?) -> UICollectionViewLayout {
         let config = UICollectionViewCompositionalLayoutConfiguration()
         config.interSectionSpacing = layoutDelegate?.spacingBetweenSections() ?? 0
-        config.contentInsetsReference = .safeArea
+//        config.contentInsetsReference = .safeArea
         
         let layout = UICollectionViewCompositionalLayout(sectionProvider: { [weak self] sectionIndex, layoutEnvironment in
             guard let self = self else { return nil }

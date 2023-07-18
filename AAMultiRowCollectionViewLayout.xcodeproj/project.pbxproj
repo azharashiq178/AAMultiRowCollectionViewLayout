@@ -17,6 +17,8 @@
 		7EC5310D2A667C6700894704 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EC5310B2A667C6700894704 /* Main.storyboard */; };
 		7EC5310F2A667C6800894704 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EC5310E2A667C6800894704 /* Assets.xcassets */; };
 		7EC531122A667C6800894704 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EC531102A667C6800894704 /* LaunchScreen.storyboard */; };
+		7EC531182A667FA700894704 /* AAMultiRowCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC531172A667FA700894704 /* AAMultiRowCollectionViewLayout.swift */; };
+		7EC5311A2A667FC400894704 /* CollectionViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC531192A667FC400894704 /* CollectionViewExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,8 @@
 		7EC5310E2A667C6800894704 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7EC531112A667C6800894704 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7EC531132A667C6800894704 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7EC531172A667FA700894704 /* AAMultiRowCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AAMultiRowCollectionViewLayout.swift; sourceTree = "<group>"; };
+		7EC531192A667FC400894704 /* CollectionViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,8 @@
 			children = (
 				7EC5309B2A6677A700894704 /* AAMultiRowCollectionViewLayout.h */,
 				7EC5309C2A6677A700894704 /* AAMultiRowCollectionViewLayout.docc */,
+				7EC531172A667FA700894704 /* AAMultiRowCollectionViewLayout.swift */,
+				7EC531192A667FC400894704 /* CollectionViewExtensions.swift */,
 			);
 			path = AAMultiRowCollectionViewLayout;
 			sourceTree = "<group>";
@@ -262,7 +268,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EC5311A2A667FC400894704 /* CollectionViewExtensions.swift in Sources */,
 				7EC5309D2A6677A700894704 /* AAMultiRowCollectionViewLayout.docc in Sources */,
+				7EC531182A667FA700894704 /* AAMultiRowCollectionViewLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -497,6 +505,7 @@
 		7EC530B02A6677A700894704 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -512,6 +521,7 @@
 		7EC530B12A6677A700894704 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;

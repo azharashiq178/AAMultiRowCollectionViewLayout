@@ -102,6 +102,26 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7E0B95472A66B49B0021A52B /* App Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7EC531052A667C6700894704 /* AppDelegate.swift */,
+				7EC531072A667C6700894704 /* SceneDelegate.swift */,
+				7EC5310E2A667C6800894704 /* Assets.xcassets */,
+			);
+			path = "App Resources";
+			sourceTree = "<group>";
+		};
+		7E0B95482A66B4D10021A52B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7EC5311B2A66821C00894704 /* CollectionViewController.swift */,
+				7EC531362A668D0600894704 /* UICollectionViewExtensions.swift */,
+				7EC5310B2A667C6700894704 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		7EC5308E2A6677A700894704 = {
 			isa = PBXGroup;
 			children = (
@@ -145,15 +165,11 @@
 		7EC531042A667C6700894704 /* AAMultiRowCollectionViewLayoutExample */ = {
 			isa = PBXGroup;
 			children = (
+				7E0B95482A66B4D10021A52B /* View */,
+				7E0B95472A66B49B0021A52B /* App Resources */,
 				7EC5311D2A66826D00894704 /* Cells */,
-				7EC531052A667C6700894704 /* AppDelegate.swift */,
-				7EC531072A667C6700894704 /* SceneDelegate.swift */,
-				7EC5310B2A667C6700894704 /* Main.storyboard */,
-				7EC5310E2A667C6800894704 /* Assets.xcassets */,
 				7EC531102A667C6800894704 /* LaunchScreen.storyboard */,
 				7EC531132A667C6800894704 /* Info.plist */,
-				7EC5311B2A66821C00894704 /* CollectionViewController.swift */,
-				7EC531362A668D0600894704 /* UICollectionViewExtensions.swift */,
 			);
 			path = AAMultiRowCollectionViewLayoutExample;
 			sourceTree = "<group>";

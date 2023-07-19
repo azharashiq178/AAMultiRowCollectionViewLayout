@@ -1,4 +1,5 @@
 # AAMultiRowCollectionViewLayout
+
 ## Installation
 
 ### Cocoapods
@@ -60,11 +61,17 @@ collectionView.collectionViewLayout = layout.createLayout(delegate: self, in: se
 ```
 Now, your collection view is configured with the custom AAMultiRowCollectionViewLayout!
 
+<p align="center">
+    <a href="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMTc2eWl4aHI1ZWVqczIxcHU2c2YzOTB3N3QxbXBkOWFpanIwY3NkbyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/5FH9o63IAKbXWJMwZm/giphy.gif">
+        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMTc2eWl4aHI1ZWVqczIxcHU2c2YzOTB3N3QxbXBkOWFpanIwY3NkbyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/5FH9o63IAKbXWJMwZm/giphy.gif" height="450">
+    </a>
+  <a href="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExeHZxaTI0dHlwd3B4OWI2eGN1MmRhcHYwZmU3ZXBwZDhjNmhqMW9mayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Cugi9r2jXtQ6riCFiO/giphy.gif">
+        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExeHZxaTI0dHlwd3B4OWI2eGN1MmRhcHYwZmU3ZXBwZDhjNmhqMW9mayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Cugi9r2jXtQ6riCFiO/giphy.gif" height="450">
+    </a>
+</p>
+
 ## Summary
 AAMultiRowCollectionViewLayout provides a powerful way to display multi-row items within UICollectionView sections, with extensive customization options for headers, footers, and section backgrounds. By adopting the AAMultiRowCollectionViewLayoutDelegate protocol and implementing the required sizeForItemAt method, you can create a visually appealing and highly functional collection view for your iOS app. The optional delegate methods allow further customization to match your specific requirements.
 
-<p align="center">
-    <a href="https://i.imgur.com/pTClbZU.gif">
-        <img src="https://i.imgur.com/pTClbZU.gif" height="450">
-    </a>
-</p>
+
+

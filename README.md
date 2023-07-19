@@ -41,25 +41,30 @@ You need to implement the following required delegate method to provide essentia
 ### Step 3: Optional Delegate Methods (Customization)
 The protocol includes optional delegate methods that allow you to further customize the layout:
 ```swift
-    func contentInsets(for section: Int) -> NSDirectionalEdgeInsets
-    func spacingBetweenItems(in section: Int) -> CGFloat
-    func scrollingBehavior(in section: Int) -> ScrollingBehavior
-    func heightForHeader(in section: Int) -> CGFloat
-    func heightForFooter(in section: Int) -> CGFloat
-    func spacingBetweenSections() -> CGFloat
-    func numberOfRows(in section: Int) -> Int
-    func spacingBetweenRows(in section: Int) -> CGFloat
-    func registerHeadersInLayout() -> [UICollectionReusableView.Type]
-    func registerFootersInLayout() -> [UICollectionReusableView.Type]
-    func registerSectionBackgroundViewsInLayout() -> [UICollectionReusableView.Type]
+func contentInsets(for section: Int) -> NSDirectionalEdgeInsets
+func spacingBetweenItems(in section: Int) -> CGFloat
+func scrollingBehavior(in section: Int) -> ScrollingBehavior
+func heightForHeader(in section: Int) -> CGFloat
+func heightForFooter(in section: Int) -> CGFloat
+func spacingBetweenSections() -> CGFloat
+func numberOfRows(in section: Int) -> Int
+func spacingBetweenRows(in section: Int) -> CGFloat
+func registerHeadersInLayout() -> [UICollectionReusableView.Type]
+func registerFootersInLayout() -> [UICollectionReusableView.Type]
+func registerSectionBackgroundViewsInLayout() -> [UICollectionReusableView.Type]
 ```
 ### Step 4: Create the Layout
 ```swift
-    var layout = AAMultiRowCollectionViewLayout()
-    collectionView.collectionViewLayout = layout.createLayout(delegate: self, in: self.collectionView)
+var layout = AAMultiRowCollectionViewLayout()
+collectionView.collectionViewLayout = layout.createLayout(delegate: self, in: self.collectionView)
 ```
 Now, your collection view is configured with the custom AAMultiRowCollectionViewLayout!
 
 ## Summary
 AAMultiRowCollectionViewLayout provides a powerful way to display multi-row items within UICollectionView sections, with extensive customization options for headers, footers, and section backgrounds. By adopting the AAMultiRowCollectionViewLayoutDelegate protocol and implementing the required sizeForItemAt method, you can create a visually appealing and highly functional collection view for your iOS app. The optional delegate methods allow further customization to match your specific requirements.
 
+<p align="center">
+    <a href="https://i.imgur.com/pTClbZU.gif">
+        <img src="https://i.imgur.com/pTClbZU.gif" height="450">
+    </a>
+</p>

@@ -151,4 +151,11 @@ extension CollectionViewController: AAMultiRowCollectionViewLayoutDelegate {
     func registerSectionBackgroundViewsInLayout() -> [UICollectionReusableView.Type] {
         return [OddSectionBackgroundView.self]
     }
+    
+    func registerSectionBackgroundViewInLayout(in section: Int) -> UICollectionReusableView.Type? {
+        if section == 0 {
+            return nil
+        }
+        return OddSectionBackgroundView.self
+    }
 }

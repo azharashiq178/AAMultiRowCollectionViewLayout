@@ -11,8 +11,8 @@ class OddSectionBackgroundView: UICollectionReusableView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = UIColor.white
-        self.layer.cornerRadius = 15
+//        self.backgroundColor = UIColor.white
+//        self.layer.cornerRadius = 15
     }
     
     required init?(coder: NSCoder) {

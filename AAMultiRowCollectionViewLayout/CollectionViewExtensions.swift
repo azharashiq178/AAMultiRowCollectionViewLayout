@@ -35,6 +35,19 @@ extension UICollectionView {
     }
 }
 
+
+extension UICollectionViewLayout {
+
+    func register<T: UICollectionReusableView>(cellType: T.Type) {
+        let nib = UINib(nibName: cellType.className, bundle: Bundle(for: cellType))
+        register(nib, forDecorationViewOfKind: cellType.className)
+    }
+    
+    func register(cellsType: [UICollectionViewCell.Type]) {
+        cellsType.forEach { register(cellType: $0) }
+    }
+}
+
 extension UICollectionView {
     
     func registerView<T: UICollectionReusableView>(viewType: T.Type, ofKind: String) {

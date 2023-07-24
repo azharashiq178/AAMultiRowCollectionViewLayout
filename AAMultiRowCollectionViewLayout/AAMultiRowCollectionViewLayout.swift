@@ -19,7 +19,7 @@ public protocol AAMultiRowCollectionViewLayoutDelegate: AnyObject {
     func spacingBetweenRows(in section: Int) -> CGFloat
     func registerHeadersInLayout() -> [UICollectionReusableView.Type]
     func registerFootersInLayout() -> [UICollectionReusableView.Type]
-    func registerSectionBackgroundViewsInLayout() -> [UICollectionReusableView.Type]
+    func registerSectionBackgroundViewInLayout(in section: Int) -> UICollectionReusableView.Type?
 }
 
 extension AAMultiRowCollectionViewLayoutDelegate {
@@ -54,8 +54,8 @@ extension AAMultiRowCollectionViewLayoutDelegate {
     public func spacingBetweenRows(in section: Int) -> CGFloat {
         return 5
     }
-    public func registerSectionBackgroundViewsInLayout() -> [UICollectionReusableView.Type] {
-        return []
+    public func registerSectionBackgroundViewInLayout(in section: Int) -> UICollectionReusableView.Type? {
+        return nil
     }
     public func registerFootersInLayout() -> [UICollectionReusableView.Type] {
         return []
@@ -99,7 +99,18 @@ public class AAMultiRowCollectionViewLayout: UICollectionViewLayout {
                 collectionView.register(view: footer.self, ofKind: UICollectionView.elementKindSectionFooter)
             }
         }
-        layoutConfiguration.sectionBackgroundIdentifiers = layoutDelegate?.registerSectionBackgroundViewsInLayout()
+        let sections = collectionView.numberOfSections
+        for i in 0..<sections {
+            if let sectionIdentifier = layoutDelegate?.registerSectionBackgroundViewInLayout(in: i) {
+                if layoutConfiguration.sectionBackgroundIdentifiers == nil {
+                    layoutConfiguration.sectionBackgroundIdentifiers = [sectionIdentifier]
+                }
+                else {
+                    layoutConfiguration.sectionBackgroundIdentifiers?.append(sectionIdentifier)
+                }
+                
+            }
+        }
         
         configuration = layoutConfiguration
         
@@ -125,7 +136,6 @@ public class AAMultiRowCollectionViewLayoutConfiguration {
     public func createLayout(layoutDelegate: AAMultiRowCollectionViewLayoutDelegate?) -> UICollectionViewLayout {
         let config = UICollectionViewCompositionalLayoutConfiguration()
         config.interSectionSpacing = layoutDelegate?.spacingBetweenSections() ?? 0
-//        config.contentInsetsReference = .safeArea
         
         let layout = UICollectionViewCompositionalLayout(sectionProvider: { [weak self] sectionIndex, layoutEnvironment in
             guard let self = self else { return nil }
@@ -211,13 +221,11 @@ public class AAMultiRowCollectionViewLayoutConfiguration {
             
             section.boundarySupplementaryItems = supplementaryItems
             
-            if let sectionBackgroundIdentifiers = self.sectionBackgroundIdentifiers {
-                for backgroundIdentifier in sectionBackgroundIdentifiers {
-                    let sectionBackground = NSCollectionLayoutDecorationItem.background(
-                        elementKind: backgroundIdentifier.className
-                    )
-                    section.decorationItems = [sectionBackground]
-                }
+            if let backgroundIdentifier = layoutDelegate?.registerSectionBackgroundViewInLayout(in: sectionIndex) {
+                let sectionBackground = NSCollectionLayoutDecorationItem.background(
+                    elementKind: backgroundIdentifier.className
+                )
+                section.decorationItems = [sectionBackground]
             }
             
             return section
@@ -247,10 +255,7 @@ public class AAMultiRowCollectionViewLayoutConfiguration {
         
         if let sectionBackgroundIdentifiers = self.sectionBackgroundIdentifiers {
             for backgroundIdentifier in sectionBackgroundIdentifiers {
-                layout.register(
-                    UINib(nibName: backgroundIdentifier.className, bundle: nil),
-                    forDecorationViewOfKind: backgroundIdentifier.className
-                )
+                layout.register(cellType: backgroundIdentifier.self)
             }
         }
     }

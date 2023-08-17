@@ -19,7 +19,7 @@ platform :ios, '9.0'
 use_frameworks!
 
 target '<Your Target Name>' do
-  pod 'AAMultiRowCollectionViewLayout', '~> 0.0.1'
+  pod 'AAMultiRowCollectionViewLayout', '~> 0.0.2'
 end
 ```
 

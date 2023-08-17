@@ -15,6 +15,7 @@ let package = Package(
     ],
     dependencies: [
         // no dependencies
+        .package(url: "https://github.com/azharashiq178/AAMultiRowCollectionViewLayout", from: "0.0.2"),
     ],
     targets: [
         .target(name: "AAMultiRowCollectionViewLayout", path: "AAMultiRowCollectionViewLayout")
